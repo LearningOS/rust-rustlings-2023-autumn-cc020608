@@ -13,7 +13,8 @@ fn main() {
         .as_secs(); 
     // What's the use of this timestamp here?
     //std::env::set_var("TEST_FOO","bar");
-    let your_command="rustc-env=TEST_FOO=bar";
+   //let your_command="rustc-env=TEST_FOO=bar";
+   let your_command=format!("rustc-env=TEST_FOO={}",timestamp);
     println!("cargo:{}", your_command);
 
    
